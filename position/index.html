@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+    <title>position</title>
+    <style>
+        .container{
+            border: 2px black solid;
+        }
+        .img2{
+            border: 1px black solid;
+            /*position relative to parent but reserve its original space */
+            position: relative;
+            top:50px;
+            left: 10px;
+        }
+        .img3{
+            border: 1px black solid;
+             /*position relative to closest ancestor and not reserve its original space it ovrelap */
+            position: absolute;
+            top: 20px;
+        }
+        .img1{
+             border: 1px black solid;
+             /* position: fixed; it is fixed for entier window */
+             position: sticky;
+             /* sticky is fixed for only its parent  */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://static.vecteezy.com/system/resources/previews/005/276/776/non_2x/logo-icon-person-on-white-background-free-vector.jpg" alt=""
+        height="100"
+        width="100"
+        class="img1"
+        >
+        <img src="https://static.vecteezy.com/system/resources/previews/005/276/776/non_2x/logo-icon-person-on-white-background-free-vector.jpg" alt=""
+        height="100"
+        width="100"
+        class="img2"
+        >
+        <img src="https://static.vecteezy.com/system/resources/previews/005/276/776/non_2x/logo-icon-person-on-white-background-free-vector.jpg" alt=""
+        height="100"
+        width="100"
+        class="img3"
+        >
+    </div>
+
+</body>
