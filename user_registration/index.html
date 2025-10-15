@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration From</title>
+    <link rel="stylesheet" href="index.css">
+   
+</head>
+<body class="body">
+    <div class="main-header">
+        <h1  id="main-header">User Registration from </h1>
+    </div>
+    <div class="res-container">
+        <form action=""  id="user-details-form">
+            <label for="name">Enter your Name</label>
+            <input type="text" name="name" id="user-name" minlength="1" maxlength="20" required> <br>
+            <label for="email">Enter your Email</label>
+            <input type="email" name="email" id="user-email" minlength="1" maxlength="20" required ><br>
+            <label for="password">Enter your password</label>
+            <input type="password" name="password" id="user-password" minlength="1" maxlength="20" required><br>
+            <label for="gender">Enter your gender</label>
+            <input type="radio" name="gender" id="male-gender" value="male" > male
+            <input type="radio" name="gender" id="female-gender" value="female" > female<br>
+            <label for="birthdate">Enter your birthdate</label>
+            <input type="date" name="birthdate" id="user-birthdate"  required><br>
+            <input type="submit" value="submit">
+        </form>
+    </div>
+
+    <div class="display-container">
+        <table border="1" class="user-details-table" id="user-details">
+            <thead >
+                <tr >
+                <th rowspan="2" class="span">Sr.No </th>
+                <th colspan="5" c;ass >User Details</th>
+                </tr>
+                <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Gender</th>
+                <th>Birth Date</th>
+                </tr>
+            </thead>
+            <tbody id="user-details-table-body">
+                <tr>
+                    <td>1</td>
+                    <td>Akshay</td>
+                    <td>Alkshay2002gmil.com</td>
+                    <td>Akshay@123</td>
+                    <td>Male</td>
+                    <td>18-8-2002</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+     <script src="script.js"></script>
+</body>
+</html>

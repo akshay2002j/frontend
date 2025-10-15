@@ -1,0 +1,165 @@
+<!-- <!DOCTYPE html>
+<head>
+    <title>position</title>
+    <style>
+        .container{
+            border: 2px black solid;
+            height: 200px;
+            position: relative;
+            top: 100px;
+            width: 100vw;
+            height: 160vh;
+        }
+        .img2{
+            border: 1px black solid;
+            /*position relative to parent but reserve its original space */
+            top:50px;
+            left: 500px;
+        }
+        .img3{
+            border: 1px rgb(255, 18, 18) solid;
+             /*position relative to closest ancestor and not reserve its original space it ovrelap */
+             position: sticky;
+            background-color: aquamarine;
+            top:80px;
+            left:0px;
+        }
+        .img1{
+             border: 1px black solid;
+             /* position: fixed; it is fixed for entier window */
+                position: fixed;
+                top:500px;
+                left:500px;
+             /* sticky is fixed for only its parent  */
+        }
+        .sticky-div{
+            border: 2px black solid;;
+            height: 200px;
+            width: 400px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://static.vecteezy.com/system/resources/previews/005/276/776/non_2x/logo-icon-person-on-white-background-free-vector.jpg" alt=""
+        height="100"
+        width="100"
+        class="img1"
+        >
+        <img src="https://static.vecteezy.com/system/resources/previews/005/276/776/non_2x/logo-icon-person-on-white-background-free-vector.jpg" alt=""
+        height="100"
+        width="100"
+        class="img2"
+        >
+        <div class="sticky-div">
+             <img src="https://static.vecteezy.com/system/resources/previews/005/276/776/non_2x/logo-icon-person-on-white-background-free-vector.jpg" alt=""
+                height="100"
+                width="100"
+                class="img3"
+                >
+        </div>
+    </div>
+
+</body> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Position Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 2000px; /* makes page scrollable */
+      background: #f8f9fa;
+    }
+
+    h2 {
+      text-align: center;
+      background: #333;
+      color: white;
+      padding: 10px;
+      margin: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .box {
+      width: 200px;
+      height: 100px;
+      margin: 30px;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    .static {
+      background: steelblue;
+      position: static;
+    }
+
+    .relative {
+      background: seagreen;
+      position: relative;
+      top: 30px;
+      left: 20x;
+    }
+
+    .container {
+      position: relative;
+      height: 200px;
+      border: 2px dashed #666;
+      margin: 50px;
+      background: #fff;
+    }
+
+    .absolute {
+      background: darkorange;
+      position: absolute;
+      top: 40px;
+      left: 60px;
+    }
+
+    .fixed {
+      background: crimson;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    .sticky {
+      background: purple;
+      position: sticky;
+      top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>CSS Position Demo (Scroll down to test Sticky & Fixed)</h2>
+
+  <div class="box static">Static</div>
+
+  <div class="box relative">Relative</div>
+
+  <div class="container">
+    <div class="box absolute">Absolute</div>
+    <p style="padding:10px;">This box is inside a relative parent (dashed border).</p>
+  </div>
+
+  <div class="box sticky">Sticky Header Box</div>
+
+  <div class="box fixed">Fixed Box</div>
+
+</body>
+</html>
