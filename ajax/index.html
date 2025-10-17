@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AJAX Basic Demo</title>
+</head>
+<body>
+  <h2>Get a Random User (AJAX Example)</h2>
+  <button id="load-user">Load User</button>
+  <p id="result"></p>
+
+  <script>
+    // document.getElementById("load-user").addEventListener("click", async () => {
+    //   const res = await fetch("https://randomuser.me/api/");
+    //   const data = await res.json();
+    //   const user = data.results[0];
+    //   document.getElementById("result").innerHTML =
+    //     `${user.name.first} ${user.name.last} (${user.email})`;
+    // });
+
+    document.getElementById("load-user").addEventListener("click", ()=>{
+        const xmlhr =  new XMLHttpRequest();
+        xmlhr.open("GET", "https://jsonplaceholder.typicode.com/users/1", true);
+        xmlhr.onload = function (){
+            if (xmlhr.status === 200) {
+            const user = JSON.parse(xmlhr.responseText);
+            document.getElementById("result").innerHTML =
+                `Name: ${user.name} <br> ✉️ Email: ${user.email}`;
+            } else {
+            document.getElementById("result").innerText = "Error loading data";
+            }
+        }
+
+        xmlhr.send();
+
+    }
+    );
+  </script>
+</body>
+</html>

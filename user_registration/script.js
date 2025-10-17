@@ -1,5 +1,5 @@
 
-document.addEventListener("DOMContentLoaded", () =>{
+$(document).ready( () =>{
   const form = document.getElementById("user-details-form");
   const tableBody = document.getElementById("user-details-table-body");
 
@@ -8,11 +8,10 @@ document.addEventListener("DOMContentLoaded", () =>{
 //   con.addEventListener("submit",(e)=>{
 //     console.log("parent element")
 //   } ,true);
-
+  let cnt = 1;
   form.addEventListener("submit", (event) =>{
     console.log("child element clikled");
     event.preventDefault();
-    let cnt = 1;
      const name = document.getElementById("user-name").value;
     const email = document.getElementById("user-email").value;
     const password = document.getElementById("user-password").value;
@@ -31,8 +30,5 @@ document.addEventListener("DOMContentLoaded", () =>{
    tableBody.appendChild(row);
    form.reset();
     alert("Form submitted successfully!");
-  });
-
-
-  
+  })
 });

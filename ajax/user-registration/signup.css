@@ -1,0 +1,41 @@
+
+
+.from-container{
+    border: 2px black solid;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.from-container input[type="submit"]{
+    position: relative;
+    left: 100px;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px black solid;
+}
+
+.from-container input {
+    height: 20px;
+    border:  1px rgb(78, 139, 186) solid;
+    border-radius: 5px;
+}
+
+#b-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows:1fr 1fr 1fr ;
+}
+h1{
+    grid-row-start: 1;
+    grid-column-start: 2;
+    align-self: center;
+    justify-self: center;
+}

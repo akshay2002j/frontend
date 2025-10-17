@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User login</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/login.js"></script>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-body">
+        <h1>User login</h1>
+        <div class="login-container">
+            <form action="" method="post" class="loginform">
+             <label for="f-email">Enter your Email</label>
+            <input type="email" id="f-email" placeholder="Enter email" name="user-email" min="4" max="20" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required> <br><br>
+            <label for="f-password">Enter your Password</label>
+            <input type="password" id="f-password" placeholder="Enter password" name="user-password" min="4" max="20"  required> <br><br>
+            <input type="submit" value="Login" id="f-sumbit" >
+        </form>
+        </div>
+    </div>
+</body>
+</html>

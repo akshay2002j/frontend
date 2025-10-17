@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User SignUp</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/signup.js"></script>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body style="background-color: rgb(240, 237, 232);">
+    <div class="body-container" id="b-container">
+    <h1 id="f-header">User Registration</h1>
+        <div class="from-container" id="f-container">
+        <form  id="signupfrom">
+            <label for="f-name">Enter your Name</label>
+            <input type="text" id="f-name" placeholder="Enter name" name="user-name" min="1" max="20"  required> <br><br>
+            <label for="f-email">Enter your Email</label>
+            <input type="email" id="f-email" placeholder="Enter email" name="user-email" min="4" max="20" required> <br><br>
+            <label for="f-password">Enter your Password</label>
+            <input type="password" id="f-password" placeholder="Enter password" name="user-password" min="4" max="20"  required> <br><br>
+            <label for="f-phone">Phone Number:</label>
+            <input type="number" name="user-phone" id="f-phone" 
+                    placeholder="XXX-XXX-XXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    title="Format: 123-456-7890" required>
+                <br><br>
+            <input type="submit" value="submit" id="f-sumbit">
+        </form>
+        </div>
+    </div>
+</body>
+</html>
