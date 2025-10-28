@@ -6,6 +6,7 @@
     <title>User SignUp</title>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/signup.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <link rel="stylesheet" href="signup.css">
 </head>
 <body style="background-color: rgb(240, 237, 232);">
@@ -14,15 +15,15 @@
         <div class="from-container" id="f-container">
         <form  id="signupfrom">
             <label for="f-name">Enter your Name</label>
-            <input type="text" id="f-name" placeholder="Enter name" name="user-name" min="1" max="20"  required> <br><br>
+            <input type="text" id="f-name" placeholder="Enter name" name="name" > <br><br>
             <label for="f-email">Enter your Email</label>
-            <input type="email" id="f-email" placeholder="Enter email" name="user-email" min="4" max="20" required> <br><br>
+            <input type="email" id="f-email" placeholder="Enter email" name="email"> <br><br>
             <label for="f-password">Enter your Password</label>
-            <input type="password" id="f-password" placeholder="Enter password" name="user-password" min="4" max="20"  required> <br><br>
+            <input type="password" id="f-password" placeholder="Enter password" name="password" > <br><br>
             <label for="f-phone">Phone Number:</label>
-            <input type="number" name="user-phone" id="f-phone" 
+            <input type="number" name="phone" id="f-phone" 
                     placeholder="XXX-XXX-XXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                    title="Format: 123-456-7890" required>
+                    title="Format: 123-456-7890">
                 <br><br>
             <input type="submit" value="submit" id="f-sumbit">
         </form>

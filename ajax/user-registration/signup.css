@@ -39,3 +39,10 @@ h1{
     align-self: center;
     justify-self: center;
 }
+
+label.error {
+  color: red;
+  font-size: 13px;
+  margin-top: 5px;
+  display: block;
+}
